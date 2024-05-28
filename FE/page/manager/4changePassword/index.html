@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(".hamburger").click(function () {
+        $(".wrapper").toggleClass("collapse");
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo">Wall-E</div>
+        <form action="../search/index.html" class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm thông báo, tài khoản" />
+          <button type="submit">Tìm</button>
+        </form>
+        <div class="profile-dropdown">
+          <div onclick="toggle()" class="profile-dropdown-btn">
+            <div class="profile-img">
+              <i class="fas fa-circle"></i>
+            </div>
+
+            <span>Victoria
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </div>
+
+          <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-user"></i>
+                Thông tin cá nhân
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+                Thông báo
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-lock"></i>
+                Đổi mật khẩu
+              </a>
+            </li>
+
+            <hr />
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                Đăng xuất
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="../dashboard/index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Trang chủ</span></a>
+        </li>
+        <li>
+          <a href="../profile/index.html">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Thông tin cá nhân</span></a>
+        </li>
+        <li>
+          <a href="../accountManagement/index.html">
+            <span class="icon"><i class="fas fa-clipboard-list"></i></i></span>
+            <span class="title">Quản lý người dùng</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="../approveManagement/index.html">
+            <span class="icon"><i class="fas fa-check"></i></span>
+            <span class="title">Duyệt bài</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_container">
+      <div>
+        <h4>Đổi mật khẩu</h4>
+      </div>
+
+      <form class="profile-info">
+        <div class="profile-input">
+          <label>Mật khẩu hiện tại</label>
+          <input type="password" value="Nhập mật khẩu hiện tại" />
+        </div>
+        <div class="profile-input">
+          <label>Mật khẩu mới</label>
+          <input type="password" value="Nhập mật khẩu mới" />
+        </div>
+        <div class="profile-input">
+          <label>Xác nhận mật khẩu</label>
+          <input type="password" value="Xác nhận khẩu mới" />
+        </div>
+        <div class="forgot-pass">
+          <a href="../../auth/forgotPassword/index.html">Quên mật khẩu?</a>
+        </div>
+        <div class="profile-submit">
+
+          <input class="profile-btn profile-btn-submit" type="submit" value="Cập nhật" />
+
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

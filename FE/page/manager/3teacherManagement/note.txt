@@ -1,0 +1,13 @@
+<select name="subjects" id="subject">
+                    <option value="all">Tất cả</option>
+                    <option value="maths">Toán</option>
+                    <option value="english">Anh</option>
+                    <option value="literature">Văn</option>
+                    <option value="physics">Vật lý</option>
+                  </select>
+ở phần trên nên test js => ko cần liệt kê ra option mà lấy từ data
+=> thêu lên như ở phần desc của từng user - vai trò - trạng thái
+
+
+liệu có nên thay năng lực khoá/mở khoá thành xoá khỏi trung tâm không ?
+=> khả năng cao sẽ phần quyền như admin

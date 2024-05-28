@@ -1,0 +1,2 @@
+                      <script>document.write(getCurrentDate())</script>
+js hàm get date được up lên

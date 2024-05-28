@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tổng quan</title>
+  <link rel="icon" type="image/png" href="/FE/images/Wall-E-icon.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v6.5.2/js/all.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo">Wall-E</div>
+        <form action="../search/index.html" class="search">
+          <i class="bx bxs-calendar-check">
+            <i class="fa fa-search"></i>
+          </i>
+          <input type="text" placeholder="Tìm kiếm thông báo tài khoản">
+          <button onclick="" type="submit">Tìm</button>
+        </form>
+        <div class="profile-dropdown">
+          <div onclick="toggle()" class="profile-dropdown-btn">
+            <div class="profile-img">
+              <i class="fas fa-circle"></i>
+            </div>
+
+            <span>Victoria
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </div>
+
+          <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+              <a href="../profile/index.html">
+                <i class="bx bxs-calendar-check">
+
+                  <i class="fas fa-user"></i>
+                </i>
+                Thông tin cá nhân
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="bx bxs-calendar-check">
+
+                  <i class="fas fa-bell"></i>
+                </i>
+                Thông báo
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="../changePassword/index.html">
+                <i class="bx bxs-calendar-check">
+                  <i class="fas fa-lock"></i>
+                </i>
+                Đổi mật khẩu
+              </a>
+            </li>
+
+            <hr />
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="bx bxs-calendar-check">
+                  <i class="fas fa-sign-out-alt"></i>
+                </i>
+                Đăng xuất
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="../1dashboard/index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Trang chủ</span></a>
+        <li>
+          <a href="../6profile/index.html">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Thông tin cá nhân</span></a>
+        </li>
+        <li>
+          <a href="../3teacherManagement/index.html" class="active">
+            <span class="icon"><i class="fa-solid fa-person-chalkboard"></i></i></span>
+            <span class="title">Quản lý giáo viên</span>
+          </a>
+        </li>
+        <li>
+          <a href="../3studentManagement/index.html">
+            <span class="icon"><i class="fa-solid fa-graduation-cap"></i></i></span>
+            <span class="title">Quản lý học viên</span>
+          </a>
+        </li>
+        <li>
+          <a href="../2confirmation/index.html">
+            <span class="icon"><i class="fas fa-check"></i></span>
+            <span class="title">Kiểm duyệt</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_container">
+      <section id="content">
+
+        <!-- MAIN -->
+        <main>
+          <div class="head-title">
+            <div class="left">
+              <h1>Quản lý giáo viên</h1>
+
+            </div>
+
+          </div>
+
+          <div class="table-data">
+            <div class="order">
+              <div class="head">
+                <h3>Danh sách giáo viên</h3>
+                <div class="filter">
+                  <select name="subjects" id="subject">
+                    <option value="all">Tất cả</option>
+                    <option value="maths">Toán</option>
+                    <option value="english">Anh</option>
+                    <option value="literature">Văn</option>
+                    <option value="physics">Vật lý</option>
+                  </select>
+                </div>
+              </div>
+              <table id="teacher-centre-manage">
+                <thead>
+                  <tr>
+                    <th>
+                      <p>Tên giáo viên</p>
+                    </th>
+                    <th>
+                      <p>Môn học</p>
+                    </th>
+                    <th>
+                      <p>Trạng thái</p>
+                    </th>
+                    <th>
+                      <p>Khóa/Mở khóa</p>
+                    </th>
+                    <!-- <th>
+                      <p>Xoá khỏi trung tâm</p>
+                    </th> -->
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+              </table>
+              <!-- Toast Notification -->
+              <div id="toast" class="toast">
+                <div id="toastMessage"></div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </main>
+        <!-- MAIN -->
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="script.js" type="module"></script>
+  <script src="dropdown.js"></script>
+
+</body>
+
+</html>

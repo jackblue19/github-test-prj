@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tổng quan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo">Wall-E</div>
+        <form action="../search/index.html" class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm thông báo, tài khoản">
+          <button type="submit">Tìm</button>
+        </form>
+        <div class="profile-dropdown">
+          <div onclick="toggle()" class="profile-dropdown-btn">
+            <div class="profile-img">
+              <i class="fas fa-circle"></i>
+            </div>
+
+            <span>Victoria
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </div>
+
+          <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+              <a href="../profile/index.html">
+                <i class="fas fa-user"></i>
+                Thông tin cá nhân
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-bell"></i>
+                Thông báo
+              </a>
+            </li>
+
+            <li class="profile-dropdown-list-item">
+              <a href="../changePassword/index.html">
+                <i class="fas fa-lock"></i>
+                Đổi mật khẩu
+              </a>
+            </li>
+
+            <hr />
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                Đăng xuất
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html" class="active">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Trang chủ</span></a>
+        </li>
+        <li>
+          <a href="../profile/index.html">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Thông tin cá nhân</span></a>
+        </li>
+        <li>
+          <a href="../accountManagement/index.html">
+            <span class="icon"><i class="fas fa-clipboard-list"></i></i></span>
+            <span class="title">Quản lý người dùng</span>
+          </a>
+        </li>
+        <li>
+          <a href="../approveManagement/index.html">
+            <span class="icon"><i class="fas fa-check"></i></span>
+            <span class="title">Duyệt bài</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_container">
+      <section id="content">
+
+        <!-- MAIN -->
+        <main>
+          <div class="head-title">
+            <div class="left">
+              <h1>Tổng quan</h1>
+
+            </div>
+
+          </div>
+
+          <ul class="box-info">
+            <li>
+              <i class='bx bxs-calendar-check'></i>
+              <span class="text">
+                <h3>1020</h3>
+                <p>Tài khoản</p>
+              </span>
+            </li>
+            <li>
+              <i class='bx bxs-group'></i>
+              <span class="text">
+                <h3>2834</h3>
+                <p>Trung tâm</p>
+              </span>
+            </li>
+            <li>
+              <i class='bx bxs-dollar-circle'></i>
+              <span class="text">
+                <h3>2543</h3>
+                <p>Khóa học</p>
+              </span>
+            </li>
+          </ul>
+          <!-- Start: DELETE MODAL -->
+          <div id="deleteModal" class="modal">
+            <div class="modal-content">
+              <p>Có chắc chắn muốn xóa thông báo <span id="userName"></span> không?</p>
+              <div class="modal-buttons">
+                <button id="confirmDelete">Xóa</button>
+                <button id="cancelDelete">Hủy</button>
+              </div>
+            </div>
+          </div>
+          <!-- End: DELETE MODAL -->
+
+          <!-- Start: DELETE TOAST -->
+          <div id="toast">
+            <div id="desc">
+              <i class="fas fa-check"></i>
+              <p id="toast-delete">
+                Xóa thành công!
+              </p>
+            </div>
+          </div>
+          <!-- End: DELETE TOAST -->
+          <!-- Start: DELETE TOAST -->
+          <div id="toast">
+            <div id="desc">
+              <p id="toast-update">Cập nhật thành công!</p>
+            </div>
+          </div>
+          <!-- End: DELETE TOAST -->
+
+          <div class="table-data">
+            <div class="order">
+              <div class="head">
+                <h3>Thông báo</h3>
+                <button onclick="window.location.href='../createNotification/index.html'"><i class="fas fa-plus"></i>Tạo
+                  thông báo</button>
+                <a href="../createNotification/"></a>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tiêu đề</th>
+                    <th>Ngày</th>
+                    <th>Chi tiết</th>
+                    <th>Thao tác</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Thông báo 1</p>
+                    </td>
+                    <td>
+                      24-5-2024
+                    </td>
+                    <td><a href="../notificationDetail/index.html">Xem</a></td>
+                    <td>
+                      <a href="../updateNotification/index.html" class="update-user"><i class="fas fa-edit"></i></a>
+                      <a class="delete-user"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Thông báo 4</p>
+                    </td>
+                    <td>
+                      24-5-2024
+                    </td>
+                    <td><a href="../notificationDetail/index.html">Xem</a></td>
+                    <td>
+                      <a href="../updateNotification/index.html" class="update-user"><i class="fas fa-edit"></i></a>
+                      <a class="delete-user"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Thông báo 2</p>
+                    </td>
+                    <td>
+                      24-5-2024
+                    </td>
+                    <td><a href="../notificationDetail/index.html">Xem</a></td>
+                    <td>
+                      <a href="../updateNotification/index.html" class="update-user"><i class="fas fa-edit"></i></a>
+                      <a class="delete-user"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Thông báo 5</p>
+                    </td>
+                    <td>
+                      24-5-2024
+                    </td>
+                    <td><a href="../notificationDetail/index.html">Xem</a></td>
+                    <td>
+                      <a href="../updateNotification/index.html" class="update-user"><i class="fas fa-edit"></i></a>
+                      <a class="delete-user"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Thông báo 6</p>
+                    </td>
+                    <td>
+                      24-5-2024
+                    </td>
+                    <td><a href="../notificationDetail/index.html">Xem</a></td>
+                    <td>
+                      <a href="../updateNotification/index.html" class="update-user"><i class="fas fa-edit"></i></a>
+                      <a class="delete-user"><i class="fas fa-trash"></i></a>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+            <!--  -->
+          </div>
+        </main>
+        <!-- MAIN -->
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

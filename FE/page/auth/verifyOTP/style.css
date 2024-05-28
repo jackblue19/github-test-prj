@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #dfe9f5;
+}
+
+.content form {
+    width: 50%;
+    justify-content: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+svg {
+    vertical-align: sub;
+}
+
+/* Start enter otp code form */
+.otp-field {
+    flex-direction: row;
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.otp-field input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.otp-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.otp-field input::-webkit-inner-spin-button,
+.otp-field input::-webkit-outer-spin-button {
+    display: none;
+}
+
+.resend {
+    font-size: 12px;
+}
+
+.resend a {
+    color: #2e4ead !important;
+}
+
+.btn-primary {
+    background-color: #2e4ead !important;
+}
+
+
+/* End enter otp code form */

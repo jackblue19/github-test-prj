@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css" />
+  <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo">Wall-E</div>
+        <form action="../search/index.html" class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm khóa học, trung tâm, giáo viên" />
+          <button type="submit">Tìm</button>
+        </form>
+        <!-- Start Modal notification details -->
+        <div id="notificationModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tiêu đề thông báo</h2>
+            <p id="notificationDetails">Nội dung thông báo</p>
+          </div>
+        </div>
+        <!-- End Modal notification details -->
+
+        <div class="item-drop-down">
+          <div class="notification">
+            <div id="bell">
+              <i class="fas fa-bell"></i>
+            </div>
+            <div class="content-notification">
+              <ul>
+                <li><a href="#" data-notification="Thông báo chi tiết về lớp học A">Thông báo về lớp học A</a></li>
+              </ul>
+              <ul>
+                <li><a href="#" data-notification="Thông báo chi tiết về lớp học B">Thông báo về lớp học B</a></li>
+              </ul>
+              <ul>
+                <li><a href="#" data-notification="Thông báo chi tiết về lớp học C">Thông báo về lớp học C</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="profile-dropdown">
+            <div class="profile-dropdown-btn">
+              <div class="profile-img">
+                <i class="fas fa-circle"></i>
+              </div>
+
+              <span>Victoria
+                <i class="fas fa-angle-down"></i>
+              </span>
+            </div>
+
+            <ul class="profile-dropdown-list">
+              <li class="profile-dropdown-list-item">
+                <a href="../profile/index.html">
+                  <i class="fas fa-user"></i>
+                  Thông tin cá nhân
+                </a>
+              </li>
+              <li class="profile-dropdown-list-item">
+                <a href="../changePassword/index.html">
+                  <i class="fas fa-lock"></i>
+                  Đổi mật khẩu
+                </a>
+              </li>
+
+              <hr />
+
+              <li class="profile-dropdown-list-item">
+                <a href="#">
+                  <i class="fas fa-sign-out-alt"></i>
+                  Đăng xuất
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="../dashboard/index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Trang chủ</span></a>
+        </li>
+        <li>
+          <a href="../profile/index.html">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Thông tin cá nhân</span></a>
+        </li>
+        <li>
+          <a href="../classList/index.html" class="active">
+            <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+            <span class="title">Lớp học của tôi</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_container">
+      <section id="content">
+        <!-- MAIN -->
+        <main>
+          <div class="head-title">
+            <div class="left">
+              <h1>Chọn tài liệu</h1>
+
+            </div>
+            <form>
+              <select name="choose" id="chooses" multiple>
+                <option value="1">Khối 1</option>
+                <option value="2">Khối 2</option>
+                <option value="3">Khối 3</option>
+                <option value="4">Khối 4</option>
+                <option value="5">Khối 5</option>
+                <option value="6">Khối 6</option>
+                <option value="7">Khối 7</option>
+                <option value="8">Khối 8</option>
+                <option value="9">Khối 9</option>
+                <option value="10">Khối 10</option>
+                <option value="11">Khối 11</option>
+                <option value="12">Khối 12</option>
+                <option value="Toán">Toán</option>
+                <option value="Ngữ văn">Ngữ văn</option>
+                <option value="Tiếng Anh">Tiếng Anh</option>
+                <option value="Lịch sử">Lịch sử</option>
+                <option value="Địa lý">Địa lý</option>
+                <option value="Vật lý">Vật lý</option>
+                <option value="Hóa học">Hóa học</option>
+                <option value="Sinh học">Sinh học</option>
+                <option value="GDCD">GDCD</option>
+                <option value="Tin học">Tin học</option>
+                <option value="Công nghệ">Công nghệ</option>
+              </select>
+              <input class="submit-material" type="submit" value="Tìm kiếm" />
+            </form>
+          </div>
+          <!-- Start timetable -->
+
+          <div class="table-data">
+            <div class="order">
+              <div class="head">
+                <h3>Tài liệu</h3>
+                <!-- Select -->
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tên tài liệu</th>
+                    <th>Môn học</th>
+                    <th>Khối lớp</th>
+                    <th>Chi tiết</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Kiểm tra học kì 1</p>
+                    </td>
+                    <td>Toán</td>
+                    <td>Lớp 5</td>
+                    <td><a href="../materialDetail/index.html">Xem</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--  -->
+          </div>
+          <!-- End classlist -->
+        </main>
+        <!-- MAIN -->
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    new MultiSelectTag("chooses"); // id
+  </script>
+</body>
+
+</html>

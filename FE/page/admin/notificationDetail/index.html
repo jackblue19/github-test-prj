@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="top_navbar">
+      <div class="hamburger">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+      <div class="top_menu">
+        <div class="logo">Wall-E</div>
+        <form action="../search/index.html" class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" placeholder="Tìm kiếm thông báo, tài khoản" />
+          <button type="submit">Tìm</button>
+        </form>
+        <div class="profile-dropdown">
+          <div onclick="toggle()" class="profile-dropdown-btn">
+            <div class="profile-img">
+              <i class="fas fa-circle"></i>
+            </div>
+
+            <span>Victoria
+              <i class="fas fa-angle-down"></i>
+            </span>
+          </div>
+
+          <ul class="profile-dropdown-list">
+            <li class="profile-dropdown-list-item">
+              <a href="../profile/index.html">
+                <i class="fas fa-user"></i>
+                Thông tin cá nhân
+              </a>
+            </li>
+            <li class="profile-dropdown-list-item">
+              <a href="../changePassword/index.html">
+                <i class="fas fa-lock"></i>
+                Đổi mật khẩu
+              </a>
+            </li>
+
+            <hr />
+
+            <li class="profile-dropdown-list-item">
+              <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                Đăng xuất
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Trang chủ</span></a>
+        </li>
+        <li>
+          <a href="../profile/index.html">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <span class="title">Thông tin cá nhân</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+            <span class="title">Quản lý người dùng</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span class="icon"><i class="fas fa-check"></i></span>
+            <span class="title">Duyệt bài</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main_container">
+      <section id="content">
+        <!-- MAIN -->
+        <main>
+          <div class="head-title">
+            <div class="left">
+              <h1>Chi tiết thông báo</h1>
+            </div>
+          </div>
+
+          <div class="notification">
+            <div class="head">
+              <h3>Tiêu đề:</h3>
+              <h4>
+                Thông báo về nâng cấp hệ thống web quản lý trung tâm giáo dục
+              </h4>
+            </div>
+            <div class="detail">
+              <p>
+                Kính gửi quý thầy/cô giáo, quý phụ huynh và học sinh, Hệ thống
+                web quản lý trung tâm giáo dục sẽ được nâng cấp vào lúc 20:00
+                ngày 25/05/2024. Việc nâng cấp này nhằm cải thiện hiệu suất hệ
+                thống và bổ sung thêm một số tính năng mới. Nội dung thay đổi:
+                Giao diện hệ thống được thay đổi mới, đẹp mắt và dễ sử dụng
+                hơn. Bổ sung tính năng tra cứu điểm thi trực tuyến. Bổ sung
+                tính năng đăng ký học phần trực tuyến. Sửa lỗi một số tính
+                năng cũ.
+              </p>
+            </div>
+            <div>
+              <button onclick="history.back()" id="btn-back">Quay lại</button>
+            </div>
+          </div>
+          <!--  -->
+        </main>
+        <!-- MAIN -->
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
